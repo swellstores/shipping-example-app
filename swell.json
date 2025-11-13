@@ -7,7 +7,15 @@
   "permissions": [],
   "extensions": [
     {
-      "type": "shipping"
+      "id": "example",
+      "type": "shipping",
+      "services": [
+        {
+          "id": "example-standard",
+          "name": "Example Shipping Service",
+          "description": "An example shipping service integration"
+        }
+      ]
     }
   ]
 }
