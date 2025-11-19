@@ -1,0 +1,11 @@
+{
+  "label": "Shipping settings",
+  "description": "Example shipping carrier configuration settings",
+  "fields": [
+    {
+      "id": "api_key",
+      "label": "API key",
+      "type": "text"
+    }
+  ]
+}
