@@ -1,21 +1,14 @@
 {
-  "description": "A shipping service example app",
-  "id": "shipping_example",
-  "name": "Shipping Example",
+  "description": "Another shipping service example app",
+  "id": "shipping_example2",
+  "name": "Shipping Example 2",
   "type": "integration",
   "version": "1.0.0",
   "permissions": [],
   "extensions": [
     {
       "id": "example",
-      "type": "shipping",
-      "services": [
-        {
-          "id": "example-standard",
-          "name": "Example Shipping Service",
-          "description": "An example shipping service integration"
-        }
-      ]
+      "type": "shipping"
     }
   ]
 }
