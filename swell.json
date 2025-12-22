@@ -1,7 +1,7 @@
 {
   "description": "Another shipping service example app",
-  "id": "shipping_example2",
-  "name": "Shipping Example 2",
+  "id": "shipping_example",
+  "name": "Shipping Example",
   "type": "integration",
   "version": "1.0.0",
   "permissions": [],

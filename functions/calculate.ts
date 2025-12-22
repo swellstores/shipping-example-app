@@ -1,3 +1,5 @@
+import { getAppConfigSettings } from "./lib";
+
 export const config: SwellConfig = {
   extension: "example",
   description: "Provide shipping rates from Example Shipping",
@@ -8,16 +10,16 @@ export const config: SwellConfig = {
 };
 
 export default async function (req: SwellRequest) {
-  // const { swell, store, data } = req;
+  const { currency } = req.data;
+  const settings = await getAppConfigSettings(req, { $currency: currency });
 
   return {
     shipment_rating: {
-      services: [
-        {
-          id: "example-standard",
-          price: 10,
-        },
-      ],
+      services: settings.services.map((service) => ({
+        id: service.id,
+        name: service.name,
+        price: service.price,
+      })),
     },
   };
 }
