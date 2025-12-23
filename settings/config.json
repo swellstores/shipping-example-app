@@ -3,9 +3,32 @@
   "description": "Example shipping carrier configuration settings",
   "fields": [
     {
-      "id": "api_key",
-      "label": "API key",
-      "type": "text"
+      "id": "services",
+      "label": "Shipping services",
+      "type": "collection",
+      "fields": [
+        {
+          "id": "id",
+          "label": "Service ID",
+          "type": "short_text",
+          "ui": "slug",
+          "required": true
+        },
+        {
+          "id": "name",
+          "label": "Service name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "price",
+          "label": "Service price",
+          "type": "number",
+          "ui": "currency",
+          "required": true,
+          "localized": true
+        }
+      ]
     }
   ]
 }
